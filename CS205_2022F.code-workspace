@@ -1,0 +1,24 @@
+{
+    "settings": {
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "aiXcoder.showTrayIcon": true
+    },
+    "folders": [
+        {
+            "name": "CS205_2022F",
+            "path": "."
+        },
+        {
+            "name": "class1",
+            "path": "class1"
+        },
+        {
+            "name": "class1_multi",
+            "path": "class1_multi"
+        },
+        {
+            "name": "lab1",
+            "path": "lab1"
+        }
+    ]
+}

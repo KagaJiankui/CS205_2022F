@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.0.0)
+project("class1_multi")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0 -std=c++11")
+message(${PROJECT_SOURCE_DIR})
+include_directories(${PROJECT_SOURCE_DIR}/include)
+aux_source_directory(${PROJECT_SOURCE_DIR}/src DIR_SRC)
+add_executable(main ${DIR_SRC})
