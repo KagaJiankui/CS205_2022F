@@ -5,7 +5,7 @@ int main() {
   int num1 = 2147483647;
   int num2 = 1;
   /**
-  ********BUG REVIEW*********
+  *************BUG REVIEW************
   The maximum of the INT variable on 64-bit systems is $2^31-1=2147483647$.
   Thus the variable ``num1`` reaches the upper bond of the INT variable,
   adding this variable with any other nonzero variables leads to overflow.
