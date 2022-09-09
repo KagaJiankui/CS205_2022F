@@ -3,4 +3,4 @@
 - [x] class 1
   - [x] class 1 examples
   - [x] lab 1 exercise
-  - [ ] lab 1 report
+  - [x] lab 1 report
