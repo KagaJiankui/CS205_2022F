@@ -19,6 +19,9 @@
         {
             "name": "lab1",
             "path": "lab1"
+        },
+        {
+            "path": "project1"
         }
     ]
 }
