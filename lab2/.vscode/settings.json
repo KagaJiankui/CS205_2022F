@@ -1,0 +1,4 @@
+{
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "cmake.sourceDirectory": "/home/lexington/CS205_2022F/lab2"
+}
