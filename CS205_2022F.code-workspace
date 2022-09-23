@@ -25,6 +25,15 @@
         },
         {
             "path": "lab2"
+        },
+        {
+            "path": "lab3/fib"
+        },
+        {
+            "path": "lab3/fac_arb"
+        },
+        {
+            "path": "lab3/simple_calc"
         }
     ]
 }

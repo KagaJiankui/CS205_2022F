@@ -7,12 +7,11 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "arguments(Debug)",
-            "program": "${workspaceFolder}/build/src/argument",
+            "name": "calc_debug(Debug)",
+            "program": "${workspaceFolder}/build/calc_debug",
             "args": [
-                "1",
-                "2",
-                "3"
+                "123e-456",
+                "01234.567"
             ],
             "cwd": "${workspaceFolder}",
             "stopOnEntry": true
