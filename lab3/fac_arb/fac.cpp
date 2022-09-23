@@ -1,5 +1,6 @@
 #include "fac.h"
 #include <cstdio>
+#pragma clang optimize on
 
 using namespace std;
 const int Max = 8000;

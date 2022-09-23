@@ -5,7 +5,7 @@ TARGET=main
 
 CC=clang++ -c
 LD=clang++ -o
-CFLAGS=-O0 -Wall -std=c++11
+CFLAGS=-O3 -march=native -Wall -std=c++11
 
 %.o:%.cpp
 	$(CC) $(CFLAGS) $< -o $@
