@@ -11,7 +11,8 @@ using namespace std;
  * @param len
  * @return int
  */
-int rev(int x, int len) {
+int rev(int x, int len)
+{
   int ans = 0;
   while (len--) {
     ans <<= 1;
@@ -28,7 +29,10 @@ int rev(int x, int len) {
  * @param x
  * @return int
  */
-int getlog2(int x) { return sizeof(int) * CHAR_BIT - 1 - __builtin_clz(x); }
+int getlog2(int x)
+{
+  return sizeof(int) * CHAR_BIT - 1 - __builtin_clz(x);
+}
 
 /**
  * @brief DIF-2 FFT function. Warning: The input of the FFT function must be inverted.
@@ -37,7 +41,8 @@ int getlog2(int x) { return sizeof(int) * CHAR_BIT - 1 - __builtin_clz(x); }
  * @param A complex vector operand
  * @param flag 1 for FFT, -1 for IFFT
  */
-void FFT(vector<complex<double>> &A, int flag) {
+void FFT(vector<complex<double>>& A, int flag)
+{
   int n = A.size();
   if (n == 1) return;
   assert((n & (n - 1)) == 0);
@@ -47,14 +52,14 @@ void FFT(vector<complex<double>> &A, int flag) {
     if (j > i) swap(A[i], A[j]);
   }
   for (int pwr = 0; pwr < lgn; pwr++) {
-    int m = 1 << pwr;
+    int             m = 1 << pwr;
     complex<double> Wm(cos(pi / m), -sin(pi / m) * flag);
     for (int k = 0; k < n; k += (m << 1)) {
       complex<double> W(1, 0);
       for (int j = 0; j < m; j++) {
-        auto U = A[k + j];
-        auto T = W * A[k + j + m];
-        A[k + j] = U + T;
+        auto U       = A[k + j];
+        auto T       = W * A[k + j + m];
+        A[k + j]     = U + T;
         A[k + j + m] = U - T;
         W *= Wm;
       }

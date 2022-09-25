@@ -6,5 +6,9 @@
         "clang-diagnostic-error",
         "clang-diagnostic-error",
         "clang-diagnostic-error"
-    ]
+    ],
+    "lldb.displayFormat": "auto",
+    "lldb.showDisassembly": "auto",
+    "lldb.dereferencePointers": true,
+    "lldb.consoleMode": "commands"
 }
