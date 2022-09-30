@@ -1,7 +1,19 @@
 {
     "settings": {
         "editor.suggest.snippetsPreventQuickSuggestions": false,
-        "aiXcoder.showTrayIcon": true
+        "aiXcoder.showTrayIcon": true,
+        "files.associations": {
+            "*.hsnips": "hsnips",
+            "*.m": "matlab",
+            "*.tcc": "cpp",
+            "*.vssettings": "xml",
+            "cmath": "cpp",
+            "iostream": "cpp",
+            "ostream": "cpp",
+            "string": "cpp",
+            "string_view": "cpp",
+            "compare": "cpp"
+        }
     },
     "folders": [
         {
@@ -34,6 +46,12 @@
         },
         {
             "path": "lab3/simple_calc"
+        },
+        {
+            "path": "lab4/stu"
+        },
+        {
+            "path": "lab4/weather"
         }
     ]
 }

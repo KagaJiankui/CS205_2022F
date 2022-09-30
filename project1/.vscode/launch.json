@@ -5,6 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "lldb-mi",
+            "request": "launch",
+            "name": "calc-debug(LLDB-MI)",
+            "target": "${workspaceFolder}/build/calc_debug",
+            "cwd": "${workspaceFolder}",
+            "valuesFormatting": "parseText"
+        },
+        {
             "type": "lldb",
             "request": "launch",
             "name": "calc_debug(Debug)",
@@ -13,8 +21,7 @@
                 "123e-456",
                 "01234.567"
             ],
-            "cwd": "${workspaceFolder}",
-            "stopOnEntry": true
+            "cwd": "${workspaceFolder}"
         }
     ]
 }
