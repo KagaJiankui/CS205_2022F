@@ -12,7 +12,7 @@ class CMatrix
   public:
   CMatrix(int, int);
   CMatrix(int, int, double);
-  CMatrix(int, int, double*,int);
+  CMatrix(int, int, double*, int);
   virtual ~CMatrix();
   CMatrix&       operator=(const CMatrix&);
   CMatrix&       operator=(double*);
@@ -27,12 +27,12 @@ class CMatrix
   int            getColumns() const;
   double         getMin(const CMatrix& m) const;
   double         getMax(const CMatrix& m) const;
-  double         getElement(int r, int c) const;
-  void           setElement(int r, int c, double el);
+  inline double  getElement(int r, int c) const;
+  inline void    setElement(int r, int c, double el);
   CMatrix        getRowVector(int r) const;
   CMatrix        getColVector(int c) const;
-  void           print() const;
+  static void    print(const CMatrix&);
   static CMatrix eye(int);
-  static CMatrix tr(const CMatrix& m);
+  static CMatrix tr(const CMatrix&);
 };
 #endif   //!__MATRIXLIB__H__
