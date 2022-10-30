@@ -52,6 +52,9 @@
         },
         {
             "path": "lab4/weather"
+        },
+        {
+            "path": "project3"
         }
     ]
 }
