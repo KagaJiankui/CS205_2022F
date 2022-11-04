@@ -3,7 +3,7 @@
 
 #ifdef WITH_AVX2
 #include <immintrin.h>
-#endif 
+#endif
 
 
 #ifdef WITH_NEON
@@ -17,8 +17,9 @@
 float dotproduct(const float *p1, const float * p2, size_t n)
 {
     float sum = 0.0f;
-    for (size_t i = 0; i < n ; i++)
+    for (size_t i = 0; i < n ; i++) {
         sum += (p1[i] * p2[i]);
+}
     return sum;
 }
 
@@ -77,6 +78,7 @@ float dotproduct_avx2(const float *p1, const float * p2, size_t n)
 float dotproduct_avx2_omp(const float *p1, const float * p2, size_t n)
 {
 #ifdef WITH_AVX2
+#ifdef _OPENMP
     if(n % 8 != 0)
     {
         std::cerr << "The size n must be a multiple of 8." <<std::endl;
@@ -97,13 +99,17 @@ float dotproduct_avx2_omp(const float *p1, const float * p2, size_t n)
     _mm256_store_ps(sum, c);
     return (sum[0]+sum[1]+sum[2]+sum[3]+sum[4]+sum[5]+sum[6]+sum[7]);
 #else
+    std::cerr << "OpenMP is not supported" << std::endl;
+    return 0.0;
+#endif
+#else
     std::cerr << "AVX2 is not supported" << std::endl;
     return 0.0;
 #endif
 }
 
 
-float dotproduct_neon(const float *p1, const float * p2, size_t n)
+float dotproduct_neon(const float * /*p1*/, const float *  /*p2*/, size_t  /*n*/)
 {
 #ifdef WITH_NEON
     if(n % 4 != 0)
@@ -130,7 +136,7 @@ float dotproduct_neon(const float *p1, const float * p2, size_t n)
 #endif
 }
 
-float dotproduct_neon_omp(const float *p1, const float * p2, size_t n)
+float dotproduct_neon_omp(const float * /*p1*/, const float *  /*p2*/, size_t  /*n*/)
 {
 #ifdef WITH_NEON
     if(n % 4 != 0)

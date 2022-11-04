@@ -1,5 +1,5 @@
 #pragma once
-
+#include <stdlib.h>
 
 float dotproduct(const float *p1, const float * p2, size_t n);
 float dotproduct_unloop(const float *p1, const float * p2, size_t n);
