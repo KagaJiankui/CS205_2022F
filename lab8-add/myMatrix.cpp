@@ -28,3 +28,14 @@ MyMatrix readMatFromFile(const char* filename)
   fclose(file);
   return result;
 }
+void writeMatToFile(MyMatrix& mat, const char* filename)
+{
+  FILE* file = fopen(filename, "w");
+  fprintf(file, "%zu %zu\n", mat.row, mat.col);
+  for (int i = 0; i < mat.row; ++i) {
+for (int j = 0; j < mat.col; ++j) { fprintf(file, " %f", mat(i, j));
+}
+fprintf(file, "\n");
+  }
+  fclose(file);
+}
