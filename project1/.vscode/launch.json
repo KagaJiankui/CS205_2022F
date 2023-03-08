@@ -5,12 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "lldb-mi",
+            "type": "lldb",
             "request": "launch",
             "name": "calc-debug(LLDB-MI)",
-            "target": "${workspaceFolder}/build/calc_debug",
+            "program": "${workspaceFolder}/build/calc_debug",
             "cwd": "${workspaceFolder}",
-            "valuesFormatting": "parseText"
         },
         {
             "type": "lldb",

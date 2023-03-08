@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.0.0)
 project("project1_CS205_2022F")
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0 -std=c++11")
+set(CMAKE_C_COMPILER "clang")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -O0 -std=c11")
 
 message(${PROJECT_SOURCE_DIR})
 include_directories(${PROJECT_SOURCE_DIR}/include)

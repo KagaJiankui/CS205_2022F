@@ -1,10 +1,10 @@
 #include <iostream>
 
 int eval_result(char symbol, int a, int b, int* flag_error);
-int main(int argc, const char** argv) {
+int main(int  /*argc*/, const char**  /*argv*/) {
   char sym = 0;
   int op1 = 0, op2 = 0, result = 0, flag_err = 0;
-  while (1) {
+  while (true) {
     std::cout << "Please select an operation:" << std::endl;
     std::cout << "+, -, *, /, % >";
     std::cin >> sym;

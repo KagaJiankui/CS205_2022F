@@ -2,10 +2,10 @@
 #include <iostream>
 #include "fib.h"
 
-int main(int argc, const char** argv) {
+int main(int  /*argc*/, const char**  /*argv*/) {
   int n = 0;
   long fib_res = 0;
-  while (1) {
+  while (true) {
     std::cout << "Please input a positive integer:";
     std::cin >> n;
     if (n > 0) {

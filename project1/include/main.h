@@ -1,15 +1,20 @@
-#pragma once
-#include <cassert>
-#include <complex>
-// #include <cstddef>
-#include <iostream>
-#include <regex>
-#include <string>
-#include <vector>
+#ifndef MAIN_H
+#define MAIN_H
 
-#include "debug_print.h"
+#include "JRegex.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-using std::vector;
-void parseToString(const std::string& inputString, vector<std::complex<double>>& integerPart, vector<std::complex<double>>& decimalPart,
-                   vector<std::complex<double>>& exponentialPart, int* type);
-void StrToComplex(std::string& inputString, vector<std::complex<double>>& outputComplexVector);
+/**
+ * @brief Find the integer, decimal and exponent in a number in scientific expression.
+ The output is an array [start 1,length 1,start 2,length 2,...,start n,length n],
+ where the *start* indicates the beginning index of the substring and the *length* indicates the length of the substring.
+ *
+ * @param regex
+ * @param target_string
+ * @param positions
+ */
+void RegexTest(const char* regex, const char* target_string, int* positions);
+
+#endif   // MAIN_H
