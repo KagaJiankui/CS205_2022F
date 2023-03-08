@@ -13,7 +13,27 @@
             "string": "cpp",
             "string_view": "cpp",
             "compare": "cpp"
-        }
+        },
+            "clangd.arguments": [
+                "--all-scopes-completion",
+                "--background-index",
+                "--background-index-priority=low",
+                "--completion-parse=auto",
+                "--completion-style=detailed",
+                "--enable-config",
+                "--header-insertion-decorators",
+                "--header-insertion=iwyu",
+                "--pch-storage=memory",
+                "--query-driver=gcc,g++,clang,clang++",
+                "--ranking-model=decision_forest",
+                "--malloc-trim",
+                "-j=24",
+                "--log=error"
+            ],
+            "clangd.checkUpdates": true,
+            "clangd.detectExtensionConflicts": false,
+            "clangd.onConfigChanged": "restart",
+            "clangd.path": "clangd",
     },
     "folders": [
         {
