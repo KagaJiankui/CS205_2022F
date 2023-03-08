@@ -26,7 +26,7 @@
                 "--pch-storage=memory",
                 "--query-driver=clang*",
                 "--ranking-model=decision_forest",
-                "--malloc-trim",
+                //"--malloc-trim",
                 "-j=24",
                 "--log=error"
             ],
