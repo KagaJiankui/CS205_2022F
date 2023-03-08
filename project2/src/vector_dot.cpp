@@ -13,3 +13,7 @@ void allocVector(myVector* vec, double* data, int size)
   vec->data   = (double*)malloc(sizeof(double) * size);
   memcpy(vec->data, data, size);
 }
+
+void freeVector(myVector *vector){
+
+}
