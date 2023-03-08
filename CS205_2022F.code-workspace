@@ -24,7 +24,7 @@
                 "--header-insertion-decorators",
                 "--header-insertion=iwyu",
                 "--pch-storage=memory",
-                "--query-driver=gcc,g++,clang,clang++",
+                "--query-driver=clang*",
                 "--ranking-model=decision_forest",
                 "--malloc-trim",
                 "-j=24",
