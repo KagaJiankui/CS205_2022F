@@ -8,8 +8,9 @@
             "defines": [],
             "compilerPath": "/usr/bin/clang",
             "intelliSenseMode": "linux-clang-x64",
-            "configurationProvider": "ms-vscode.cmake-tools"
-            // "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "cStandard": "c11",
+            "cppStandard": "c++11"
         }
     ],
     "version": 4

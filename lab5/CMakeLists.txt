@@ -1,0 +1,13 @@
+set(CMAKE_C_COMPILER "clang")
+set(CMAKE_CXX_COMPILER "clang++")
+cmake_minimum_required(VERSION 3.0.0)
+project(lab5)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0")
+
+file(GLOB_RECURSE main_src_list "${PROJECT_SOURCE_DIR}/src/*.cpp")
+foreach(_filename ${main_src_list})
+  string(REGEX MATCHALL "[0-9A-Za-z_]*.cpp" tmp1 ${_filename})
+  string(REGEX REPLACE ".cpp" "" exe_name ${tmp1})
+  message("Target Name: ${exe_name}")
+  add_executable(${exe_name} ${_filename})
+endforeach()

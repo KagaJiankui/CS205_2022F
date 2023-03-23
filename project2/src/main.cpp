@@ -1,7 +1,7 @@
 #include "main.h"
 #include "vector_dot.h"
 
-double benchmark_millis(myVector* v1, myVector* v2, void (*dotProduct)(myVector*, myVector*))
+double benchmark_millis(myVector* v1, myVector* v2, double (*dotProduct)(myVector*, myVector*))
 {
   struct timeval t1, t2;
   double         delta_time = 0;
