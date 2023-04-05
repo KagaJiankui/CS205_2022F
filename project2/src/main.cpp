@@ -46,7 +46,7 @@ void LargeRandTest(char max_test_size, int *size_list, double *test_result) {
         allocVector(&vec2, test_size_list[i]);
         AllocRandtoVector(&vec1, 2);
         AllocRandtoVector(&vec2, 2);
-        test_result[i] = benchmark_millis(&vec1, &vec2, dotProduct_fast);
+        test_result[i] = benchmark_millis(&vec1, &vec2, dotProduct);
         freeVector(&vec1);
         freeVector(&vec2);
     }
@@ -67,11 +67,11 @@ void BaseVmulTest() {
 }
 
 int main(int argc, char const *argv[]) {
-    char   size            = 19;
-    double result_list[19] = {};
-    int    size_list[19]   = {};
+    char   size            = 29;
+    double result_list[29] = {};
+    int    size_list[29]   = {};
     LargeRandTest(size, size_list, result_list);
-    FILE *result_csv = fopen("./report/test_2^18_avx2.csv", "w");
+    FILE *result_csv = fopen("./report/test_2^28_baseline_o3.csv", "w");
     for (char i = 0; i < size; i++) {
         fprintf(result_csv, "%d,", size_list[i]);
     }
