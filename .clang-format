@@ -9,7 +9,7 @@ BraceWrapping:
   AfterEnum: false
 IndentCaseLabels: true
 IndentPPDirectives: BeforeHash
-IndentWidth: 4
+IndentWidth: 2
 AlignConsecutiveAssignments: Consecutive
 AlignConsecutiveDeclarations: Consecutive
 AlignConsecutiveMacros: Consecutive
