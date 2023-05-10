@@ -1,0 +1,5 @@
+*pd = 5
+*pshred = 5
+*pstr = Hello World!
+double free or corruption (out)
+zsh: IOT instruction  ./build/exercise1 > ./run_1.txt
