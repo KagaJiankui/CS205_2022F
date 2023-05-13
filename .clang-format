@@ -18,6 +18,7 @@ AlignTrailingComments: true
 AllowShortFunctionsOnASingleLine: All
 AllowShortIfStatementsOnASingleLine: WithoutElse
 AlignArrayOfStructures: Left
+AlwaysBreakTemplateDeclarations: Yes
 IncludeBlocks: Regroup
 IncludeCategories:
   - Regex:           '^((<|")(std).*[^/]'
